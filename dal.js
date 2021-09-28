@@ -4,14 +4,19 @@ const databaseUrl = process.env.DATABASE_URL || url
 let db            = null;
 require("dotenv").config()
 
-//console.log(process.env.DATABASE_URL)
+console.log(process.env.DATABASE_URL)
  
 // connect to mongo
 MongoClient.connect(databaseUrl, {useUnifiedTopology: true}, function(err, client) {
-    console.log("Connected successfully to db server");
+    if(err){
+        console.log(err)
+    }else{
+        console.log("Connected successfully to db server");
 
-    // connect to myproject database
-    db = client.db('myproject');
+        // connect to myproject database
+        db = client.db('myproject');
+    }
+    
 });
 
 // create user account

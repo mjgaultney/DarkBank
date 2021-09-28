@@ -12,17 +12,12 @@ const { getToken, authorizeUser } = require('./middleware.js');
 // used to serve static files from public directory
 //app.use(express.static('client'));
 
-app.use(express.static(path.join(__dirname, "client", "build")))
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 app.use(cors());
 
 // create user account
 app.get('/account/create/:name/:email/:password', function (req, res) {
-
+   
     // check if account exists
     dal.find(req.params.email).
         then((users) => {
@@ -53,7 +48,7 @@ app.get('/account/create/:name/:email/:password', function (req, res) {
 
 // login user 
 app.get('/account/login/:email/:password', function (req, res) {
-
+   
     dal.find(req.params.email).
         then((user) => {
 
@@ -68,7 +63,7 @@ app.get('/account/login/:email/:password', function (req, res) {
                         token: getToken(user[0])
                     }); 
 
-                    console.log(getToken(user[0]))
+                   // console.log(getToken(user[0]))
                 }
                 else{
                     res.send('Login failed: wrong password');
@@ -122,6 +117,13 @@ app.get('/account/all', authorizeUser, function (req, res) {
             console.log(docs);
             res.send(docs);
     });
+});
+
+
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 
