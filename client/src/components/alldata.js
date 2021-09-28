@@ -1,10 +1,13 @@
+import {useState, useEffect} from 'react'
+import Card from "./context";
+
 const user_data = JSON.parse(localStorage.getItem("user_data"));
 
 function AllData(){
 
-    const [data, setData] = React.useState('');    
+    const [data, setData] = useState('');    
 
-    React.useEffect(() => {
+   useEffect(() => {
         
         // fetch all accounts from API
         fetch('/account/all', {
@@ -25,8 +28,10 @@ function AllData(){
     <Card
         bgcolor="secondary"
         header="DarkBank Users"
-        status={status}
+        status={"status"}
         body={data}
           />
     )
     }
+
+    export default AllData

@@ -1,3 +1,6 @@
+import React from "react";
+import Card from "./context";
+
 function Deposit(){
   const [show, setShow]     = React.useState(true);
   const [status, setStatus] = React.useState('');  
@@ -68,3 +71,5 @@ function DepositForm(props){
 
   </>);
 }
+
+export default Deposit

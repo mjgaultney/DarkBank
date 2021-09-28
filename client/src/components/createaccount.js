@@ -1,3 +1,6 @@
+import React from "react";
+import Card from "./context";
+
 function CreateAccount(){
   const [show, setShow]     = React.useState(true);
   const [status, setStatus] = React.useState('');
@@ -77,3 +80,5 @@ function CreateForm(props){
 
   </>);
 }
+
+export default CreateAccount

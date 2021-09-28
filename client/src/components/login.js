@@ -1,3 +1,6 @@
+import React from "react";
+import Card from "./context";
+
 function Login(props){
   const [show, setShow]   = React.useState(true);
   const [status, setStatus] = React.useState(''); 
@@ -71,3 +74,5 @@ function LoginForm(props){
    
   </>);
 }
+
+export default Login

@@ -1,3 +1,6 @@
+import React from "react";
+import Card from "./context";
+
 function Withdraw(){
   const [show, setShow]     = React.useState(true);
   const [status, setStatus] = React.useState('');  
@@ -73,3 +76,5 @@ function WithdrawForm(props){
 
   </>);
 }
+
+export default Withdraw

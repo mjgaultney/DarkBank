@@ -1,3 +1,6 @@
+import React from "react";
+import Card from "./context";
+
 function Balance(){
   const [show, setShow]     = React.useState(true);
   const [status, setStatus] = React.useState('');  
@@ -42,11 +45,11 @@ function BalanceForm(props){
             // const data = JSON.parse(text);
             props.setStatus(data);
             props.setShow(false);
-            setBalance(user.balance);
+            setBalance(data.balance);
             console.log('JSON:', data);
         } catch(err) {
-            props.setStatus(text)
-            console.log('err:', text);
+            props.setStatus("text")
+            console.log('err:', "text");
         }
     });
   }
@@ -68,3 +71,5 @@ function BalanceForm(props){
 
   </>);
 }
+
+export default Balance

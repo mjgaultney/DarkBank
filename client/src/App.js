@@ -1,8 +1,21 @@
+import React from 'react'
+import NavBar from "./components/navbar";
+import {UserContext} from './components/context'
+import {BrowserRouter, Redirect, Route} from 'react-router-dom'
+import AlertBar from './components/alertbar';
+import Login from './components/login';
+import Home from './components/home';
+import CreateAccount from './components/createaccount';
+import Deposit from './components/deposit';
+import AllData from './components/alldata';
+import Withdraw from './components/withdraw';
+import Balance from './components/balance';
+
 const useState = React.useState;
 const user_data = JSON.parse(localStorage.getItem("user_data"));
-const Redirect = ReactRouterDOM.Redirect;
 
-const Spa = () => {
+
+const App = () => {
   const [successAlert, setSuccessAlert] = useState(false);
   const [alertData, setAlertData] = useState("");
 
@@ -12,7 +25,7 @@ const Spa = () => {
   };
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div>
         <NavBar />
         <UserContext.Provider
@@ -77,8 +90,10 @@ const Spa = () => {
           </div>
         </UserContext.Provider>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
-ReactDOM.render(<Spa />, document.getElementById("root"));
+export default App
+
+

@@ -15,3 +15,5 @@ function AlertBar({alertData}) {
     </div>
   )
 }
+
+export default AlertBar
