@@ -42,7 +42,7 @@ const App = () => {
         >
           {user_data && user_data.token ? <AlertBar alertData={alertData} /> : null}
           <div className="container" style={{ padding: "20px" }}>
-            <Route path="/" exact component={Home} />
+            <Route exact path="/" exact component={Home} />
             <Route exact path="/CreateAccount/" component={CreateAccount} />
             <Route
               path="/login/"
