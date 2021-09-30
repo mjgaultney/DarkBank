@@ -1,12 +1,15 @@
 # DarkBank
 
-<h1>Project Title:</h1> BadBank --> DarkBank --> NewBadBank
+<h1>Project Title:</h1> BadBank --> DarkBank -->
 
 <h2>Description/Motivation:</h2> 
 As you may be able to tell from the title - this project has been through a few different styles and names due to each new process 
 learned during its production. The further it moved along the more character and personality developed. This version is maybe a step backwards 
 in design however it is leaps forward in practicality. I am motivated to always learn more and this project really helped me in understanding 
 different aspects that make up a functional web application. 
+
+This Application is also available on the cloud @ https://dark-bank.herokuapp.com/ 
+
 
 <h2>Installation Guidelines:</h2> 
 <li>Download the code or clone it from my repository onto your local machine</li>
@@ -27,6 +30,7 @@ different aspects that make up a functional web application.
 <h2>Technology used:</h2> 
 The technology used in this are google chrome, react, docker, visual studio, node, express, cors, mongodb.  
 <h3>Features:</h3> In this application you will be able to sign up for an account with the bank, log in with the password and user name, check your balance, deposit "money" and withdrawl "money" as well as check the membership rolls with the current account balances. 
+<li>Additions to this App are the security (JWT) for account holders. Restricted access to non account holders as well as a welcome banner when accessing your account. </li>
 
 <h2>License</h2> 
 Copyright 2021 mjgaultney@gmail.com
